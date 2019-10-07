@@ -19,6 +19,10 @@ group = 'com.ronpotter99.simpleschoolwebapp'
 version = '1.0.0'
 sourceCompatibility = '1.8'
 
+springBoot {
+    mainClassName = 'com.ronpotter99.simpleschoolwebapp.Application'
+}
+
 repositories {
     mavenCentral()
 }
