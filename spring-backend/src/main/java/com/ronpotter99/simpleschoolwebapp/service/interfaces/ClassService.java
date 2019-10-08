@@ -7,4 +7,8 @@ import java.util.List;
 public interface ClassService {
 
     List<Class> getAllClasses();
+
+    List<Class> getClassesForProfessor(Long professorId);
+
+    Class getClass(Long classId);
 }
