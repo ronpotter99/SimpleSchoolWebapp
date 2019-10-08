@@ -1,16 +1,17 @@
 package com.ronpotter99.simpleschoolwebapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
+@Table(name = "user")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User implements Serializable {
 
     @Id
@@ -25,7 +26,9 @@ public class User implements Serializable {
     @Column
     private String email;
     @Column
-    private boolean professor;
+    private Boolean professor;
+    @OneToMany(mappedBy = "professor")
+    private List<Class> teachesClass;
 
 
     public Long getId() {
@@ -60,11 +63,11 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public boolean isProfessor() {
+    public Boolean isProfessor() {
         return professor;
     }
 
-    public void setProfessor(boolean professor) {
+    public void setProfessor(Boolean professor) {
         this.professor = professor;
     }
 
