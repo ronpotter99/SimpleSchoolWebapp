@@ -1,5 +1,20 @@
-<h1>Professors:</h1>
-<div *ngFor="let professor of professors">
-  <h3>{{ professor.firstName }} {{ professor.lastName }}:</h3>
-  <div>{{ professor.email }}</div>
+<div class="row">
+  <div class="column">
+    <h1>Professors:</h1>
+    <div *ngFor="let professor of professors">
+      <h3>{{ professor.firstName }} {{ professor.lastName }}:</h3>
+      <div>{{ professor.email }}</div>
+      <button (click)="selectClasses(professor.id)">View Classes</button>
+    </div>
+  </div>
+  <div class="column" *ngIf="selectedProfessorClasses.length > 0">
+    <h1>Professor's classes: <button (click)="selectedProfessorClasses = []">Hide classes</button></h1>
+    <div *ngFor="let clazz of selectedProfessorClasses">
+      <h3>{{ clazz.name }}</h3>
+      <h4>Students:</h4>
+      <div *ngFor="let student of clazz.enrolledStudents">
+        {{ student.lastName }} {{ student.lastName }}
+      </div>
+    </div>
+  </div>
 </div>

@@ -7,6 +7,7 @@ import {ProfessorsComponent} from './professors/professors.component';
 import {UserService} from "./professors/user.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
+import {ClassService} from "./professors/class.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {CommonModule} from "@angular/common";
     HttpClientModule,
     CommonModule
   ],
-  providers: [UserService],
+  providers: [UserService, ClassService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
