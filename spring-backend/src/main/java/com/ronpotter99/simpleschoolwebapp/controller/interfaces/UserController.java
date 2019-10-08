@@ -14,4 +14,7 @@ public interface UserController {
 
     @GetMapping("/user/{professorId}/teaches")
     List<Class> getUserClasses(@PathVariable("professorId") Long professorId);
+
+    @GetMapping("/user/teaches")
+    List<User> getProfessors();
 }

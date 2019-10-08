@@ -20,4 +20,9 @@ public class DefaultUserService implements UserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
+    @Override
+    public List<User> getProfessors() {
+        return userRepository.findProfessors();
+    }
 }

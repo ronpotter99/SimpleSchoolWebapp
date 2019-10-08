@@ -29,4 +29,9 @@ public class DefaultUserController implements UserController {
     public List<Class> getUserClasses(Long professorId) {
         return classService.getClassesForProfessor(professorId);
     }
+
+    @Override
+    public List<User> getProfessors() {
+        return userService.getProfessors();
+    }
 }
