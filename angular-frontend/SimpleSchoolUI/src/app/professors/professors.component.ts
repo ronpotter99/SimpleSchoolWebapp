@@ -19,7 +19,6 @@ export class ProfessorsComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getProfessors().subscribe((data: User[]) => {
-      console.log(data);
       this.professors = data;
     })
   }
