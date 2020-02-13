@@ -21,4 +21,4 @@ The default URL for the frontend is `localhost:4200/`
 The default URL for the backend is `localhost:8080/`
 
 
-#### Built and referenced as a training outreach tool for Kingland Systems Corporation
+#### Built and referenced as a training outreach tool for Kingland Corporation
