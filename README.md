@@ -19,3 +19,6 @@ The default URL for the frontend is `localhost:4200/`
     1. The command may also be `gradle bootRun` or `gradlew bootRun`, depending on your system
 
 The default URL for the backend is `localhost:8080/`
+
+
+#### Built and referenced as a training outreach tool for Kingland Systems Corporation
