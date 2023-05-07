@@ -1,0 +1,46 @@
+{
+  "name": "simple-school-ui",
+  "version": "1.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "v16-lts",
+    "@angular/common": "v16-lts",
+    "@angular/compiler": "v16-lts",
+    "@angular/core": "v16-lts",
+    "@angular/forms": "v16-lts",
+    "@angular/platform-browser": "v16-lts",
+    "@angular/platform-browser-dynamic": "v16-lts",
+    "@angular/router": "v16-lts",
+    "rxjs": "~6.6.7",
+    "tslib": "~2.4.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "v16-lts",
+    "@angular/cli": "v16-lts",
+    "@angular/compiler-cli": "v16-lts",
+    "@angular/language-service": "v16-lts",
+    "@types/node": "ts3.7",
+    "@types/jasmine": "ts3.7",
+    "@types/jasminewd2": "ts3.7",
+    "codelyzer": "6.0.0",
+    "jasmine-core": "4.5.0",
+    "jasmine-spec-reporter": "7.0.0",
+    "karma": "6.4.0",
+    "karma-chrome-launcher": "3.1.1",
+    "karma-coverage-istanbul-reporter": "3.0.3",
+    "karma-jasmine": "5.1.0",
+    "karma-jasmine-html-reporter": "2.0.0",
+    "protractor": "7.0.0",
+    "ts-node": "10.9.1",
+    "tslint": "5.20.0"
+  }
+}

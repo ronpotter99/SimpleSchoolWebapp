@@ -5,11 +5,21 @@ This is a simple demonstration of a web application using Spring for the backend
 
 ### Frontend
 1. Navigate to the 'angular-frontend' directory in the terminal
-2. Download the latest version of NPM (Node Package Manager)
-3. Run `npm install`
-    1. Warning, this may take a while and use a lot of resources on your computer
-4. Run `npm start`
-    1. This may also take a while to start running
+2. Download and install the latest version of NVM (Node Version Manager)
+    1. On Windows, this Github repository can be used: https://github.com/coreybutler/nvm-windows/releases
+    2. Use the 'nvm-setup.zip' release asset
+    3. Running `nvm --version` in the terminal will verify successful installation
+        1. The terminal may need re-started before the newly installed package is available
+3. Run `nvm install 16.20.0`
+4. Run `nvm use 16.20.0`
+    1. Verify node and npm versions are correctly installed by running the following (You may need to restart the teriminal):
+        1. `node --version`
+            1. This should show `v16.20.0`
+        2. `npm --version`
+            1. This should show `8.19.4`
+4. Run `npm install`
+    1. This may take a while to download
+5. Run `npm start`
 
 The default URL for the frontend is `localhost:4200/`
 
