@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,14 +26,14 @@ public class Class implements Serializable {
     private String code;
     @ManyToOne
     @JoinColumn(name = "professor_id")
-    private User professor;
+    private Person professor;
     @ManyToMany
     @JoinTable(
-            name = "class_user_mapping",
+            name = "class_person_mapping",
             joinColumns = @JoinColumn(name = "class_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id")
+            inverseJoinColumns = @JoinColumn(name = "person_id")
     )
-    private List<User> enrolledStudents = new ArrayList<>();
+    private List<Person> enrolledStudents = new ArrayList<>();
 
 
     public Long getId() {
@@ -68,19 +68,19 @@ public class Class implements Serializable {
         this.code = code;
     }
 
-    public User getProfessor() {
+    public Person getProfessor() {
         return professor;
     }
 
-    public void setProfessor(User professor) {
+    public void setProfessor(Person professor) {
         this.professor = professor;
     }
 
-    public List<User> getEnrolledStudents() {
+    public List<Person> getEnrolledStudents() {
         return enrolledStudents;
     }
 
-    public void setEnrolledStudents(List<User> enrolledStudents) {
+    public void setEnrolledStudents(List<Person> enrolledStudents) {
         this.enrolledStudents = enrolledStudents;
     }
 

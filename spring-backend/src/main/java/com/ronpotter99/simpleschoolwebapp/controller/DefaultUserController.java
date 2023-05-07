@@ -2,7 +2,7 @@ package com.ronpotter99.simpleschoolwebapp.controller;
 
 import com.ronpotter99.simpleschoolwebapp.controller.interfaces.UserController;
 import com.ronpotter99.simpleschoolwebapp.entity.Class;
-import com.ronpotter99.simpleschoolwebapp.entity.User;
+import com.ronpotter99.simpleschoolwebapp.entity.Person;
 import com.ronpotter99.simpleschoolwebapp.service.interfaces.ClassService;
 import com.ronpotter99.simpleschoolwebapp.service.interfaces.UserService;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +21,7 @@ public class DefaultUserController implements UserController {
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<Person> getAllUsers() {
         return userService.getAllUsers();
     }
 
@@ -31,7 +31,7 @@ public class DefaultUserController implements UserController {
     }
 
     @Override
-    public List<User> getProfessors() {
+    public List<Person> getProfessors() {
         return userService.getProfessors();
     }
 }

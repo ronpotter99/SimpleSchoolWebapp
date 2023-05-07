@@ -1,4 +1,4 @@
-INSERT INTO user(id, first_name, last_name, email, professor) VALUES
+INSERT INTO "person"(id, first_name, last_name, email, professor) VALUES
 (0, 'Thomas', 'Stackhouse', 'thomas.stackhouse@kingland.com', true),
 (1, 'Clifford', 'Berry', 'clifford.berry@test.com', true),
 (2, 'Carrie', 'Catt', 'carrie.catt@test.com', true),
@@ -49,13 +49,13 @@ INSERT INTO user(id, first_name, last_name, email, professor) VALUES
 (47, 'Lucila', 'Reddell', 'lreddell17@pen.io', false),
 (48, 'Heath', 'Morrissey', 'hmorrissey18@ftc.gov', false);
 
-INSERT INTO class(id, name, department, code, professor_id) VALUES
+INSERT INTO "class"(id, name, department, code, professor_id) VALUES
 (0, 'Web Development Club', 'Computer Science', 'COMS404', 0),
 (1, 'Technical Writing', 'English', 'ENGL340', 1),
 (2, 'Asymptotic Expansions of Elliptic Integrals', 'Mathematics', 'MATH000', 2),
 (3, 'Basics of Computing', 'Computer Engineering', 'COME310', 3);
 
-INSERT INTO class_user_mapping(user_id, class_id) VALUES
+INSERT INTO "class_person_mapping"(person_id, class_id) VALUES
 (4, 0),
 (5, 0),
 (6, 0),

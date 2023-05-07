@@ -4,15 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-import javax.persistence.*;
-import javax.validation.constraints.Email;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "person")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User implements Serializable {
+public class Person implements Serializable {
 
     @Id
     @Column
@@ -77,14 +77,14 @@ public class User implements Serializable {
 
         if (o == null || getClass() != o.getClass()) return false;
 
-        User user = (User) o;
+        Person person = (Person) o;
 
         return new EqualsBuilder()
-                .append(professor, user.professor)
-                .append(id, user.id)
-                .append(firstName, user.firstName)
-                .append(lastName, user.lastName)
-                .append(email, user.email)
+                .append(professor, person.professor)
+                .append(id, person.id)
+                .append(firstName, person.firstName)
+                .append(lastName, person.lastName)
+                .append(email, person.email)
                 .isEquals();
     }
 
@@ -101,7 +101,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Person{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

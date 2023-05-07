@@ -14,9 +14,10 @@ This is a simple demonstration of a web application using Spring for the backend
 The default URL for the frontend is `localhost:4200/`
 
 ### Backend
-1. Navigate to the 'spring-backend' directory in the terminal
-2. Run `./gradlew bootRun`
-    1. The command may also be `gradle bootRun` or `gradlew bootRun`, depending on your system
+1. Install the Java 17 JDK
+2. Navigate to the 'spring-backend' directory in the terminal
+3. Run `./gradlew.bat bootRun`
+    1. The command may also be `./gradlew bootRun` or `gradlew bootRun`, depending on your system
 
 The default URL for the backend is `localhost:8080/`
 
