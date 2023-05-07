@@ -11,6 +11,6 @@ export class ClassService {
   constructor(private httpClient: HttpClient) { }
 
   public getProfessorsClasses(professorId: number) {
-    return this.httpClient.get(this.REST_API_BASE + '/user/' + professorId + '/teaches')
+    return this.httpClient.get(this.REST_API_BASE + '/person/' + professorId + '/teaches')
   }
 }

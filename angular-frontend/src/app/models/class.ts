@@ -1,10 +1,10 @@
-import {User} from "./user";
+import {Person} from "./person";
 
 export class Class {
   id: number;
   name: string;
   department: string;
   code: string;
-  professor: User;
-  enrolledStudents: Array<User>;
+  professor: Person;
+  enrolledStudents: Array<Person>;
 }

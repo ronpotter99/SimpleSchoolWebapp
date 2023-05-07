@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-public interface UserController {
+public interface PersonController {
 
-    @GetMapping("/user/all")
-    List<Person> getAllUsers();
+    @GetMapping("/person/all")
+    List<Person> getAllPeople();
 
-    @GetMapping("/user/{professorId}/teaches")
-    List<Class> getUserClasses(@PathVariable("professorId") Long professorId);
+    @GetMapping("/person/{professorId}/teaches")
+    List<Class> getPersonClasses(@PathVariable("professorId") Long professorId);
 
-    @GetMapping("/user/teaches")
+    @GetMapping("/person/teaches")
     List<Person> getProfessors();
 }

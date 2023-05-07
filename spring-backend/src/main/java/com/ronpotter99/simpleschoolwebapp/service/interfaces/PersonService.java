@@ -4,9 +4,9 @@ import com.ronpotter99.simpleschoolwebapp.entity.Person;
 
 import java.util.List;
 
-public interface UserService {
+public interface PersonService {
 
-    List<Person> getAllUsers();
+    List<Person> getAllPeople();
 
     List<Person> getProfessors();
 }

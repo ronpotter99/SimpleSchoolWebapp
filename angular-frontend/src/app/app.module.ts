@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ProfessorsComponent} from './professors/professors.component';
-import {UserService} from "./professors/user.service";
+import {PersonService} from "./professors/person.service";
 import {HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import {ClassService} from "./professors/class.service";
@@ -20,7 +20,7 @@ import {ClassService} from "./professors/class.service";
     HttpClientModule,
     CommonModule
   ],
-  providers: [UserService, ClassService],
+  providers: [PersonService, ClassService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

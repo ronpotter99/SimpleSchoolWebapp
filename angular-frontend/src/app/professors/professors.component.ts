@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from "../models/user";
-import {UserService} from "./user.service";
+import {Person} from "../models/person";
+import {PersonService} from "./person.service";
 import {ClassService} from "./class.service";
 import {Class} from "../models/class";
 
@@ -11,14 +11,14 @@ import {Class} from "../models/class";
 })
 export class ProfessorsComponent implements OnInit {
 
-  professors: Array<User> = [];
+  professors: Array<Person> = [];
   selectedProfessorClasses: Array<Class> = [];
 
-  constructor(private userService: UserService, private classService: ClassService) {
+  constructor(private personService: PersonService, private classService: ClassService) {
   }
 
   ngOnInit() {
-    this.userService.getProfessors().subscribe((data: User[]) => {
+    this.personService.getProfessors().subscribe((data: Person[]) => {
       this.professors = data;
     })
   }
