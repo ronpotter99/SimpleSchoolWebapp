@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1><strong>Classes</strong></h1>
+            <div *ngFor="let clazz of classes">
+                <div class="row mt-2">
+                    <div class="col">
+                        <h3>{{ clazz.name }}</h3>
+                        <h6><strong>Code:</strong> {{ clazz.code }}</h6>
+                        <h6><strong>Department:</strong> {{ clazz.department }}</h6>
+                        <h6><strong>Professor:</strong> {{ clazz.professor.firstName }} {{ clazz.professor.lastName }}</h6>
+                        <h6><strong>Professor's Email:</strong> {{ clazz.professor.email }}</h6>
+                        <h6><strong>Enrolled Students:</strong> {{ clazz.enrolledStudents.length }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

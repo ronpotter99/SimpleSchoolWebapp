@@ -1,3 +1,13 @@
-<app-professors></app-professors>
-
-<router-outlet></router-outlet>
+<div class="navbar sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">
+            <img class="logo" src="assets\images\basic_university_logo.png" alt="University Logo">
+        </a>
+        <a class="col-3 navbar-text text-light" routerLink="/my-classes">My Classes</a>
+        <a class="col-3 navbar-text text-light" routerLink="/class-listings">Class Listings</a>
+        <a class="col-3 navbar-text text-light" routerLink="/professors">Professors</a>
+    </div>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

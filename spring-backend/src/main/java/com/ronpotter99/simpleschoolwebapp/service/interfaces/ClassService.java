@@ -8,7 +8,9 @@ public interface ClassService {
 
     List<Class> getAllClasses();
 
-    List<Class> getClassesForProfessor(Long professorId);
-
     Class getClass(Long classId);
+
+    List<Class> getClassesPersonTeaches(Long professorId);
+
+    List<Class> getClassesPersonTakes(Long studentId);
 }

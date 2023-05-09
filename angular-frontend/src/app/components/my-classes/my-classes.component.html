@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1><strong>Select Person</strong></h1>
+            <select class="form-control" [(ngModel)]="selectedPerson" (ngModelChange)="selectNewPerson()">
+                <option [ngValue]="null" selected>Select Person:</option>
+                <option [ngValue]="person" *ngFor="let person of people">{{ person.firstName }} {{ person.lastName }}</option>
+            </select>
+            <div class="mt-2" *ngIf="!selectedPerson">No Person Selected</div>
+            <div class="mt-2" *ngIf="selectedPerson">
+                <h3><strong>Classes</strong></h3>
+                <div *ngIf="selectedPersonClasses.length == 0">This person takes no classes.</div>
+                <div *ngFor="let clazz of selectedPersonClasses">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <h4>{{ clazz.name }}</h4>
+                            <h6><strong>Code:</strong> {{ clazz.code }}</h6>
+                            <h6><strong>Department:</strong> {{ clazz.department }}</h6>
+                            <h6><strong>Professor:</strong> {{ clazz.professor.firstName }} {{ clazz.professor.lastName }}</h6>
+                            <h6><strong>Professor's Email:</strong> {{ clazz.professor.email }}</h6>
+                            <h6><strong>Enrolled Students:</strong> {{ clazz.enrolledStudents.length }}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

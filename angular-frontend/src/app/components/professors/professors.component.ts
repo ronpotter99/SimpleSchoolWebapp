@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Person} from "../models/person";
-import {PersonService} from "./person.service";
-import {ClassService} from "./class.service";
-import {Class} from "../models/class";
+import {Person} from "../../models/person";
+import {PersonService} from "../../services/person.service";
+import {ClassService} from "../../services/class.service";
+import {Class} from "../../models/class";
 
 @Component({
   selector: 'app-professors',
@@ -24,8 +24,12 @@ export class ProfessorsComponent implements OnInit {
   }
 
   selectClasses(professorId: number) {
-    this.classService.getProfessorsClasses(professorId).subscribe((data: Class[]) => {
+    this.classService.getClassesPersonTeaches(professorId).subscribe((data: Class[]) => {
       this.selectedProfessorClasses = data;
     })
+  }
+
+  scrollToTop() {
+    document.documentElement.scrollTop = 0;
   }
 }

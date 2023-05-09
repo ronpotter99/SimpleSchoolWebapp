@@ -12,9 +12,6 @@ public interface PersonController {
     @GetMapping("/person/all")
     List<Person> getAllPeople();
 
-    @GetMapping("/person/{professorId}/teaches")
-    List<Class> getPersonClasses(@PathVariable("professorId") Long professorId);
-
     @GetMapping("/person/teaches")
     List<Person> getProfessors();
 }

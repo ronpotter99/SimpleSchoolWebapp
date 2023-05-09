@@ -13,4 +13,10 @@ public interface ClassController {
 
     @GetMapping("/class/{classId}")
     Class getClassById(@PathVariable("classId") Long classId);
+
+    @GetMapping("/class/taughtBy/{personId}")
+    List<Class> getClassesPersonTeaches(@PathVariable("personId") Long personId);
+
+    @GetMapping("/class/enrolledIn/{personId}")
+    List<Class> getClassesPersonTakes(@PathVariable("personId") Long personId);
 }

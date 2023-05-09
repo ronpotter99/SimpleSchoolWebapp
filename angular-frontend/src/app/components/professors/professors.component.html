@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1><strong>Professor List</strong></h1>
+      <div class="mt-2" *ngFor="let professor of professors">
+        <h3>{{ professor.firstName }} {{ professor.lastName }}</h3>
+        <h6>{{ professor.email }}</h6>
+        <button class="btn btn-primary" (click)="selectClasses(professor.id)">View Classes</button>
+      </div>
+    </div>
+    <div>
+      <div class="col" *ngIf="selectedProfessorClasses.length > 0">
+        <h1><strong>Professor's Classes</strong></h1>
+        <button class="btn btn-secondary btn-sm btn-block" (click)="selectedProfessorClasses = []">Hide classes</button>
+        <div class="mt-2" *ngFor="let clazz of selectedProfessorClasses">
+          <h3>{{ clazz.name }}</h3>
+          <h6><strong>Code:</strong> {{ clazz.code }}</h6>
+          <h6><strong>Students:</strong></h6>
+          <div *ngFor="let student of clazz.enrolledStudents">
+            {{ student.firstName }} {{ student.lastName }}
+          </div>
+        </div>
+        <button class="btn btn-secondary btn-sm btn-block" (click)="scrollToTop()">Scroll to top</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,4 +25,14 @@ public class DefaultClassController implements ClassController {
     public Class getClassById(Long classId) {
         return classService.getClass(classId);
     }
+
+    @Override
+    public List<Class> getClassesPersonTeaches(Long personId) {
+        return classService.getClassesPersonTeaches(personId);
+    }
+
+    @Override
+    public List<Class> getClassesPersonTakes(Long personId) {
+        return classService.getClassesPersonTakes(personId);
+    }
 }

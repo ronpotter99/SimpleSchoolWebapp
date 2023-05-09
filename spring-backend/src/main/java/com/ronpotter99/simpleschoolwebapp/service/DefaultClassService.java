@@ -5,6 +5,7 @@ import com.ronpotter99.simpleschoolwebapp.repository.ClassRepository;
 import com.ronpotter99.simpleschoolwebapp.service.interfaces.ClassService;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,11 +24,6 @@ public class DefaultClassService implements ClassService {
     }
 
     @Override
-    public List<Class> getClassesForProfessor(Long professorId) {
-        return classRepository.findClassesByProfessorId(professorId);
-    }
-
-    @Override
     public Class getClass(Long classId) {
         Class toReturn = null;
         Optional<Class> foundClass = classRepository.findById(classId);
@@ -37,5 +33,13 @@ public class DefaultClassService implements ClassService {
         }
 
         return toReturn;
+    }
+
+    public List<Class> getClassesPersonTeaches(Long professorId) {
+        return classRepository.findClassesByProfessorId(professorId);
+    }
+
+    public List<Class> getClassesPersonTakes(Long studentId) {
+        return classRepository.findClassesByStudentId(studentId);
     }
 }

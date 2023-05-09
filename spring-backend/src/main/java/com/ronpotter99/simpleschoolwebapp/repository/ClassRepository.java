@@ -9,6 +9,9 @@ import java.util.List;
 
 public interface ClassRepository extends JpaRepository<Class, Long> {
 
-    @Query("select p.teachesClass from Person p where p.id = :professorId")
+    @Query("select c from Class c where c.professor.id = :professorId")
     List<Class> findClassesByProfessorId(@Param("professorId") Long professorId);
+
+    @Query("select c from Class c inner join c.enrolledStudents es where es.id = :studentId")
+    List<Class> findClassesByStudentId(@Param("studentId") Long studentId);
 }
