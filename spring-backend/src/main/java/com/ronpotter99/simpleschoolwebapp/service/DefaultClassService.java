@@ -5,14 +5,13 @@ import com.ronpotter99.simpleschoolwebapp.repository.ClassRepository;
 import com.ronpotter99.simpleschoolwebapp.service.interfaces.ClassService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class DefaultClassService implements ClassService {
 
-    private ClassRepository classRepository;
+    private final ClassRepository classRepository;
 
     public DefaultClassService(ClassRepository classRepository) {
         this.classRepository = classRepository;
@@ -35,10 +34,12 @@ public class DefaultClassService implements ClassService {
         return toReturn;
     }
 
+    @Override
     public List<Class> getClassesPersonTeaches(Long professorId) {
         return classRepository.findClassesByProfessorId(professorId);
     }
 
+    @Override
     public List<Class> getClassesPersonTakes(Long studentId) {
         return classRepository.findClassesByStudentId(studentId);
     }
