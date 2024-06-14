@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class DefaultClassController implements ClassController {
 
-    private ClassService classService;
+    private final ClassService classService;
 
     public DefaultClassController(ClassService classService) {
         this.classService = classService;

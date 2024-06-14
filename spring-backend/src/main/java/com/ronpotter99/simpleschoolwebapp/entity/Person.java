@@ -71,6 +71,14 @@ public class Person implements Serializable {
         this.professor = professor;
     }
 
+    public List<Class> getTeachesClass() {
+        return teachesClass;
+    }
+
+    public void setTeachesClass(List<Class> teachesClass) {
+        this.teachesClass = teachesClass;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

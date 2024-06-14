@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class DefaultPersonService implements PersonService {
 
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
     public DefaultPersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
